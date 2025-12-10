@@ -31,14 +31,14 @@ class PipelineScheduler:
         # 2. Technical Analysis Modules (Parallel Execution)
         self.analysis_dir = os.path.join(self.base_dir, "technical_analysis")
         self.indicators = [
-            os.path.join(self.analysis_dir, "calc_ema_crossover.py"),   # ex-15ema.py
-            os.path.join(self.analysis_dir, "calc_rsi_multi.py"),       # ex-15rsi.py (Adicionei a vírgula aqui!)
-            os.path.join(self.analysis_dir, "calc_ema_trend.py"),       # ex-15ema99.py (Mudamos para 'trend')
-            os.path.join(self.analysis_dir, "calc_macd_momentum.py")    # ex-15macd.py (Mudamos para 'momentum')
+            os.path.join(self.analysis_dir, "calc_ema_crossover.py"), 
+            os.path.join(self.analysis_dir, "calc_rsi_multi.py"),      
+            os.path.join(self.analysis_dir, "calc_ema_trend.py"),       
+            os.path.join(self.analysis_dir, "calc_macd_momentum.py")    
         ]
         
         # 3. Alerting Module (Final Step)
-        self.alert_script = os.path.join(self.base_dir, "alerting", "signal_broadcaster.py") # ex-15sinais.py
+        self.alert_script = os.path.join(self.base_dir, "alerting", "signal_broadcaster.py")
 
     def run_ingestion(self):
         """Step 1: Fetch fresh data from Binance."""
