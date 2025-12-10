@@ -31,10 +31,10 @@ class PipelineScheduler:
         # 2. Technical Analysis Modules (Parallel Execution)
         self.analysis_dir = os.path.join(self.base_dir, "technical_analysis")
         self.indicators = [
-            os.path.join(self.analysis_dir, "calc_ema_fast.py"),  # ex-15ema.py
-            os.path.join(self.analysis_dir, "calc_ema_slow.py"),  # ex-15ema99.py
-            os.path.join(self.analysis_dir, "calc_macd.py"),      # ex-15macd.py
-            os.path.join(self.analysis_dir, "calc_rsi.py")        # ex-15rsi.py
+            os.path.join(self.analysis_dir, "calc_ema_crossover.py"),   # ex-15ema.py
+            os.path.join(self.analysis_dir, "calc_rsi_multi.py"),       # ex-15rsi.py (Adicionei a vírgula aqui!)
+            os.path.join(self.analysis_dir, "calc_ema_trend.py"),       # ex-15ema99.py (Mudamos para 'trend')
+            os.path.join(self.analysis_dir, "calc_macd_momentum.py")    # ex-15macd.py (Mudamos para 'momentum')
         ]
         
         # 3. Alerting Module (Final Step)
